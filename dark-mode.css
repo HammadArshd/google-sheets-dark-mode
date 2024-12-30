@@ -1,0 +1,102 @@
+/* invert the table, formula bar, cell editor, and navbar
+   and dim transparency to soften */
+#waffle-grid-container,
+#formula-bar-name-box-wrapper,
+div[role='navigation'],
+.cell-input.editable {
+    filter: invert();
+    opacity: 0.9;
+}
+
+/* re-invert colors inside inverted parents to restore them */
+.overlay-container-ltr,
+.formula-content > span:not(.default-formula-text-color),
+.docs-gm .docs-sheet-active-tab .docs-sheet-tab-name,
+.docs-gm .docs-sheet-active-tab .docs-icon {
+    filter: invert();
+}
+
+/* invert selection color manually */
+::selection {
+    background-color: #e58c17 !important;
+}
+
+/* Misc artifacts */
+.autofill-handle {
+    border-color: #333;
+}
+.input-box {
+    background: #000 !important;
+}
+.cell-input {
+    background: #ddd !important;
+}
+
+/* Header and Titlebar */
+#docs-header:not(.docs-hub-appbar) .docs-titlebar-buttons {
+    background: #2a2a2a !important; /* Unified dark grey background */
+    color: #e0e0e0 !important; /* Light grey text for readability */
+}
+
+/* Toolbar Wrapper */
+.docs-grille-gm3.docs-gm .docs-material #docs-toolbar-wrapper {
+    background-color: #2f2f2f !important; /* Slightly darker grey for toolbar */
+}
+
+/* Toolbar Buttons */
+.docs-grille-gm3 #docs-align-palette .goog-toolbar-button,
+.docs-grille-gm3 .docs-main-toolbars .goog-toolbar-button,
+.docs-grille-gm3 .docs-main-toolbars .goog-toolbar-combo-button,
+.docs-grille-gm3 .docs-main-toolbars .goog-toolbar-menu-button,
+.docs-grille-gm3 .trix-palette .goog-toolbar-menu-button {
+    background: #2f2f2f !important; /* Match toolbar background */
+    color: #e0e0e0 !important; /* Light grey text */
+}
+
+.docs-material .goog-toolbar-button,
+.docs-material .goog-toolbar-menu-button {
+    color: #b0b0b0 !important; /* Muted grey for inactive buttons */
+}
+
+/* Menubar */
+.docs-gm .docs-menubar .goog-control {
+    color: #e0e0e0 !important; /* Light grey for menu text */
+}
+
+.docs-gm .docs-menubar .goog-control-disabled {
+    background-color: transparent !important;
+    opacity: 0.5; /* Dimmed for disabled items */
+}
+
+/* Omnibox Toolbar */
+.docs-grille-gm3 #docs-omnibox-toolbar .docs-omnibox-input {
+    background: #3a3a3a !important; /* Slightly lighter grey for input fields */
+    color: #e0e0e0 !important; /* Light grey text */
+}
+
+/* Share Button and Quick Actions */
+.docs-grille-gm3 #docs-titlebar-share-client-button .jfk-button,
+.docs-grille-gm3 #scb-quick-actions-menu-button.goog-flat-menu-button {
+    background: #2f2f2f !important; /* Match toolbar background */
+    color: #e0e0e0 !important; /* Light grey text */
+}
+
+.docs-grille-gm3 #docs-titlebar-share-client-button .jfk-button:hover,
+.docs-grille-gm3 #scb-quick-actions-menu-button.goog-flat-menu-button:hover {
+    background: #3a3a3a !important; /* Slightly lighter grey for hover effect */
+}
+
+/* Active Tab */
+.docs-gm .docs-sheet-active-tab .docs-sheet-tab-name {
+    background: #444444 !important; /* Subtle highlight for active tab */
+    color: #ffffff !important; /* White text for contrast */
+}
+
+/* Miscellaneous */
+#docs-chrome:not(.docs-hub-chrome) {
+    background: #2a2a2a !important; /* Unified dark grey background */
+}
+
+.docs-grille-gm3 .docs-title-input {
+    background: #f3f6f6 !important;
+}

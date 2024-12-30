@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Google Sheets Dark Mode",
+    "version": "1.0",
+    "description": "Enable dark mode for Google Sheets.",
+    "permissions": ["activeTab"],
+    "content_scripts": [
+        {
+            "matches": ["https://docs.google.com/spreadsheets/*"],
+            "css": ["dark-mode.css"]
+        }
+    ]
+}
